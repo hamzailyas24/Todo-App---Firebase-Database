@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo Application</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDG98OsmnhdxKwop1dVKeQKNZld7sZ34Jw",
+            authDomain: "todoapp-90770.firebaseapp.com",
+            projectId: "todoapp-90770",
+            storageBucket: "todoapp-90770.appspot.com",
+            messagingSenderId: "1048084691013",
+            appId: "1:1048084691013:web:e15c5fa8c018d82bf74b2c"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 class="text-center m-5"> TO-DO List </h1>
+
+    </div>
+
+    <div class="container text-center my-5">
+
+        <input type="text" placeholder="Add Item" id="todo-item">
+
+        <button class="btn btn-primary" onclick="AddTodo()"> Add Item </button>
+
+        <button class="btn btn-danger" onclick="DeleteAll()"> Delete All </button>
+
+    </div>
+
+    <div class="container">
+
+        <ul id="list">
+
+
+
+        </ul>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
